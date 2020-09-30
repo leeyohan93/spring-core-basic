@@ -1,15 +1,17 @@
 package spring.core.basic.order;
 
 import spring.core.basic.discount.DiscountPolicy;
-import spring.core.basic.discount.FixDiscountPolicy;
 import spring.core.basic.member.Member;
 import spring.core.basic.member.MemberRepository;
-import spring.core.basic.member.MemoryMemberRepository;
 
 public class OrderServiceImpl implements OrderService {
-    private final MemberRepository memberRepository = new
-            MemoryMemberRepository();
-    private final DiscountPolicy discountPolicy = new FixDiscountPolicy();
+    private final MemberRepository memberRepository;
+    private final DiscountPolicy discountPolicy;
+
+    public OrderServiceImpl(final MemberRepository memberRepository, final DiscountPolicy discountPolicy) {
+        this.memberRepository = memberRepository;
+        this.discountPolicy = discountPolicy;
+    }
 
     @Override
     public Order createOrder(final Long memberId, final String itemName, final int itemPrice) {
