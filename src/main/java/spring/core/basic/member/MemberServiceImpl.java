@@ -1,9 +1,11 @@
 package spring.core.basic.member;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+/**
+ * 생성자가 하나일때는 @Autowired 생략 가능
+ */
 @Component
 @RequiredArgsConstructor
 public class MemberServiceImpl implements MemberService {

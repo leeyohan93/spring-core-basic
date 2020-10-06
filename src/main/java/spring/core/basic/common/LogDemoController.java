@@ -7,6 +7,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 
+/**
+ * Log 예제를 통한 Bean scope = request 인 Bean 다루는 방법을 학습
+ * - ObjectProvider or Provider 를 활용하거나 proxy 를 사용
+ */
 @Controller
 @RequiredArgsConstructor
 public class LogDemoController {
