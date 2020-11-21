@@ -16,6 +16,11 @@ public class MemberServiceImpl implements MemberService {
 //        this.memberRepository = memberRepository;
 //    }
 
+
+//    public MemberServiceImpl(final MemberRepository memberRepository) {
+//        this.memberRepository = memberRepository;
+//    }
+
     public void join(Member member) {
         memberRepository.save(member);
     }

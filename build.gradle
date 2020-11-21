@@ -22,9 +22,11 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-se'
     //web 라이브러리 추가
     implementation 'org.springframework.boot:spring-boot-starter-web'
     //lombok 라이브러리 추가 시작
+    compile "org.springframework.boot:spring-boot-starter-security"
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
     testCompileOnly 'org.projectlombok:lombok'
